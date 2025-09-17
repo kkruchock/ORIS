@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box; /* размер без отступов */
+}
+
+body {
+    margin: 0; /* внешний отступ */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%; /* полная шитрина */
+    min-height: 100vh; /* высота 100% от размера страницы */
+    background-color: rgba(77, 166, 255, 0.69); /* цвет фона */
+
+    display: flex; /* включить flexbox */
+    flex-direction: column; /* дочернии элементы в колонку */
+    align-items: center; /* и по центру */
+}
+
+.task-adder {
+    margin-top: 35px; /* отступ сверху */
+    margin-bottom: 20px;
+
+    display: flex;
+    gap: 14px; /* отступ между элементами */
+
+    padding: 18px;
+    background-color: #fffff0;
+    border-radius: 20px; /* закругление */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* тень */
+    width: 90%;
+    max-width: 500px;
+}
+
+.task-adder input {
+    flex: 1; /* занимает все доступное пространство */
+    padding: 14px 18px;
+    border-width: 2px; /* толщина обводки */
+    border-style: solid; /* сплошная */
+    border-color: #e6dfdf;
+    border-radius: 16px;
+    font-size: 18px;
+    outline: none; /* убираем рамку по умолчанию */
+    transition: border-color 0.5s ease; /* плавное появление рамки */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-adder input:focus {
+    border-color: #4da6ff
+}
+
+.task-adder button {
+    padding: 14px 20px;
+    background: #43a7f3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    cursor: pointer; /* курсор меняем на ручку */
+    transition: all 0.5s ease;
+}
+
+.task-adder button:hover {
+    background: #0056b3;
+    transform: translateY(-2px); /* поднимаем при наведении */
+}
+
+.task-adder button:active {
+    transform: translateY(0); /* возвращаем на место, как бдуто нажали */
+}
+
+.task-list {
+    width: 100%;
+    max-width: 490px;
+    list-style: none;
+    background-color: #fffff0;
+    border-radius: 16px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 14px 20px;
+    align-items: center;
+    margin-bottom: 12px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+
+    word-break: break-word;
+    gap: 16px;
+}
+
+.delete-button {
+    padding: 10px 16px;
+    height: 36px;
+    background: #918a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+}
+
+.delete-button:hover {
+    background: #20d504;
+    transform: translateY(-2px); /* поднимаем при наведении */
+}
+
+.delete-button:active {
+    transform: translateY(0); /* возвращаем на место, как бдуто нажали */
+}
