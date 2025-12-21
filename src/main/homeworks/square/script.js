@@ -15,15 +15,11 @@ let squareY = 0
 
 setInterval(moveSquare => {
 
-    if (squareX + squareWidth >= containerWidth) {
-        speedX *= -1
-    } else if (squareX <= 0) {
+    if (squareX + squareWidth >= containerWidth || squareX <= 0) {
         speedX *= -1
     }
 
-    if (squareY + squareHeight >= containerHeight) {
-        speedY *= -1
-    } else if (squareY <= 0) {
+    if (squareY + squareHeight >= containerHeight || squareY <= 0) {
         speedY *= -1
     }
 
